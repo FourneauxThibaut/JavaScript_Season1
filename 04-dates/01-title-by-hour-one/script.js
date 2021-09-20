@@ -8,4 +8,13 @@
 
     // your code here
 
+    const currentDate = new Date();
+    const currentHours = currentDate.getHours();
+
+    if ( currentHours >= 18 ){
+        document.getElementById("target").innerHTML = "Good evening";
+    }else{
+        document.getElementById("target").innerHTML = "Hello";
+    }
+
 })();

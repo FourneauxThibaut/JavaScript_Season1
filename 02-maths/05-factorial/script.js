@@ -8,6 +8,19 @@
     document.getElementById("run").addEventListener("click", () => {
 
         // your code here
+        let userinput = document.getElementById("number").value;
+        
+        function factorial(n){
+            //base case
+            if(n == 0 || n == 1){
+                return 1;
+            //recursive case
+            }else{
+                return n * factorial(n-1);
+            }
+        }
+
+        document.getElementById("answer").innerHTML = factorial(userinput);
 
     });
 

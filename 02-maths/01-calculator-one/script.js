@@ -38,6 +38,6 @@
         let opOne = document.getElementById('op-one').value;
         let opTwo = document.getElementById('op-two').value;
 
-        document.getElementById("answer").innerHTML = parseInt(opOne) / parseInt(opTwo);
+    document.getElementById("answer").innerHTML = parseInt(opOne) / parseInt(opTwo);
     });
 })();

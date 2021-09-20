@@ -9,27 +9,12 @@
         // your code here
         let userinput = document.getElementById("numbers").value;
         let userArr = userinput.split(',');
-        let sortedArr = [];
-        let min = userArr[0];
-        console.log(userArr);
         
-        while ( userArr.length > 0 ){
+        userArr.sort(function(a, b) {
+            return a - b;
+        });
 
-            for (let i = 0; i < userArr.length; i++){
-                min = Math.min(...userArr)
-                sortedArr.push(min);
-
-                let index = userArr.indexOf(min);
-
-                // console.log(userArr);
-                // console.log(min);
-                console.log(index);
-                userArr.splice(index, 1);
-            }
-        }
-
-        console.log(userArr);
-        document.getElementById("answer").innerHTML = sortedArr;
+        document.getElementById("answer").innerHTML = userArr;
     });
 
 })();
