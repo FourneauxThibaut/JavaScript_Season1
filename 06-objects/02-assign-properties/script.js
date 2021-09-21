@@ -19,4 +19,44 @@
         user: null,
     };
     // your code here
+    
+    document.getElementById("run").addEventListener("click", function() {
+        computers.forEach(element => {
+            if (element.available == undefined && element.os == undefined && element.user == undefined)
+            {
+                element.available = defaultProps.available;
+                element.os = defaultProps.os;
+                element.user = defaultProps.user;
+            }
+            else if (element.available == undefined && element.os == undefined)
+            {
+                element.available = defaultProps.available;
+                element.os = defaultProps.os;
+            }
+            else if (element.available == undefined && element.user == undefined)
+            {
+                element.available = defaultProps.available;
+                element.user = defaultProps.user;
+            }
+            else if (element.user == undefined && element.os == undefined)
+            {
+                element.user = defaultProps.user;
+                element.os = defaultProps.os;
+            }
+            else if (element.available == undefined)
+            {
+                element.available = defaultProps.available;
+            }
+            else if (element.os == undefined)
+            {
+                element.os = defaultProps.os;
+            }
+            else if (element.user == undefined)
+            {
+                element.user = defaultProps.user;
+            }
+        });
+        console.log(computers);
+    });
+
 })();
