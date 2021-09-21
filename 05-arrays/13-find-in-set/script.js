@@ -15,4 +15,15 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        console.log(people.size);
+
+        if (Array.from(people).find(e => e === "Alexandre") != undefined){
+            console.log("there is a Alexandre in the set");
+        }else{
+            console.log("there is not a Alexandre in the set");
+        }
+
+    });
 })();

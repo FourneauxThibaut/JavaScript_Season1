@@ -18,5 +18,17 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click", function() {
+        appelCount = 0;
+        fruits.forEach(element => {
+            if (element == "apple"){
+                appelCount++;
+            }
+        });
+        if ( appelCount > 0){
+                console.log("there is apple in the list");
+        }else{
+                console.log("there is no apple in the list");
+        }
+    });
 })();
