@@ -4,5 +4,10 @@
 (() => {
 
     // your code here
-
+    let counter = document.getElementById('counter');
+    let input = document.getElementById('pass-one');
+    input.addEventListener('input', function () {
+        input.maxLength = "10";
+        counter.textContent = input.value.length + "/10";
+    });
 })();

@@ -4,5 +4,6 @@
 (() => {
 
     // your code here
-
+    document.querySelectorAll(".target").innerHTML = "Owned";
+    // document.getElementsByClassName("target").innerHTML = "Owned";
 })();
