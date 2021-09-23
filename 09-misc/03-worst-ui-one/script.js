@@ -4,5 +4,11 @@
 (() => {
 
     // your code here
+    sliderValue = document.getElementById('slider');
+    valueShow = document.getElementById('target');
+
+    sliderValue.oninput = function(){
+        valueShow.textContent = 0+sliderValue.value
+    };
 
 })();

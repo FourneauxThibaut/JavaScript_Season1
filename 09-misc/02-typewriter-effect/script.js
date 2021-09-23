@@ -5,12 +5,14 @@
 
     // your code here
     let target = document.getElementById('target');
-    target.style.opacity = "0"; 
+    let text = target.textContent;
+    target.textContent.innerHTML = "";
 
-    for (var i = 0; i < target.length; i++) {
+    for (var i = 0; i < text.length; i++) {
         setTimeout(function(){ 
-        target.textContent.charAt(i).style.opacity = "1"; 
-    }, Math.floor(Math.random() * 61));
-
+            target.textContent.innerHTML = text.charAt(i)
+        }, Math.floor(Math.random() * 61));
     }
+    console.log(text);
+
 })();
