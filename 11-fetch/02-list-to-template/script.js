@@ -15,19 +15,27 @@
             const clone = [];
         
             for ( let i = 0; i < count; i++ ){
-                console.log(data[i]);
                 clone[i] = document.importNode(template.content, true);
                 let name = clone[i].querySelectorAll(".name");
                 let alterEgo = clone[i].querySelectorAll(".alter-ego");
                 let powers = clone[i].querySelectorAll(".powers");
 
-                name.textContent = data[i].name;
-                alterEgo.textContent = data[i].alterEgo;
-                powers.textContent = data[i].abilities;
+                
                 
                 target.appendChild(clone[i]);
             }     
         }
         console.log(data);
+
+        allName = document.querySelectorAll('.name');
+        allAlterEgo = document.querySelectorAll('.alter-ego');
+        allPowers = document.querySelectorAll('.powers');
+        heroList = allName.length;
+
+        for (let j = 0; j < allName.length; j++){
+            allName[j].textContent = data[j].name;
+            allAlterEgo[j].textContent = data[j].alterEgo;
+            allPowers[j].textContent = data[j].abilities;
+        };
     })
 })();

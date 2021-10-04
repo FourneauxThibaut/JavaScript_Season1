@@ -5,18 +5,22 @@
 (() => {
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let currentDay = document.getElementById("dob-day").value;
+        let currentMonth = document.getElementById("dob-month").value;
+        let currentYear = document.getElementById("dob-year").value;
 
-    const currentDate = new Date();
-    userDay = document.getElementById("dob-day").value;
-    userMonth = document.getElementById("dob-month").value;
-    userYear = document.getElementById("dob-year").value;
+        const today = new Date();
+        const birthDate = new Date(currentYear, currentMonth - 1, currentDay);
+        // currentMonth - 1 because month index are 0 based, meaning January = 0 instead of 1
 
-    userDate = new Date( userMonth+ userDay, userYear);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
 
-
-    difference = currentDate.getFullYear() - userDate.getFullYear();
-    
-    console.log(difference);
-    // days = Math.round(difference / (1000 * 60 * 60 * 24) - 1);
+        alert(age);
+    })
 
 })();
